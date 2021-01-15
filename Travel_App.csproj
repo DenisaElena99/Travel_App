@@ -169,14 +169,85 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArticlesController.cs" />
+    <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\CheckBoxViewModel.cs" />
+    <Compile Include="Controllers\CommentsController.cs" />
+    <Compile Include="Controllers\DestinationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="CustomValidation\DateValidation.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202101092013176_InitialModel.cs" />
     <Compile Include="Migrations\202101092013176_InitialModel.designer.cs">
       <DependentUpon>202101092013176_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101092213574_SecondModel.cs" />
+    <Compile Include="Migrations\202101092213574_SecondModel.designer.cs">
+      <DependentUpon>202101092213574_SecondModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101101630073_ThirdMigration.cs" />
+    <Compile Include="Migrations\202101101630073_ThirdMigration.designer.cs">
+      <DependentUpon>202101101630073_ThirdMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101101724278_FourthMigration.cs" />
+    <Compile Include="Migrations\202101101724278_FourthMigration.designer.cs">
+      <DependentUpon>202101101724278_FourthMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101101741269_FifthMigration.cs" />
+    <Compile Include="Migrations\202101101741269_FifthMigration.designer.cs">
+      <DependentUpon>202101101741269_FifthMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101102206335_SixthMigration.cs" />
+    <Compile Include="Migrations\202101102206335_SixthMigration.designer.cs">
+      <DependentUpon>202101102206335_SixthMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101110835185_SeventhMigration.cs" />
+    <Compile Include="Migrations\202101110835185_SeventhMigration.designer.cs">
+      <DependentUpon>202101110835185_SeventhMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101121309315_EighthMigration.cs" />
+    <Compile Include="Migrations\202101121309315_EighthMigration.designer.cs">
+      <DependentUpon>202101121309315_EighthMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101121409338_NinethMigration.cs" />
+    <Compile Include="Migrations\202101121409338_NinethMigration.designer.cs">
+      <DependentUpon>202101121409338_NinethMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101121420204_TenthMigration.cs" />
+    <Compile Include="Migrations\202101121420204_TenthMigration.designer.cs">
+      <DependentUpon>202101121420204_TenthMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101131352260_EleventhMigration.cs" />
+    <Compile Include="Migrations\202101131352260_EleventhMigration.designer.cs">
+      <DependentUpon>202101131352260_EleventhMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101132209236_TwthMigration.cs" />
+    <Compile Include="Migrations\202101132209236_TwthMigration.designer.cs">
+      <DependentUpon>202101132209236_TwthMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101132227442_ThthMigration.cs" />
+    <Compile Include="Migrations\202101132227442_ThthMigration.designer.cs">
+      <DependentUpon>202101132227442_ThthMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101132254127_FothMigration.cs" />
+    <Compile Include="Migrations\202101132254127_FothMigration.designer.cs">
+      <DependentUpon>202101132254127_FothMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101132257561_FiMigration.cs" />
+    <Compile Include="Migrations\202101132257561_FiMigration.designer.cs">
+      <DependentUpon>202101132257561_FiMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101140858396_SxthMigration.cs" />
+    <Compile Include="Migrations\202101140858396_SxthMigration.designer.cs">
+      <DependentUpon>202101140858396_SxthMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101141033110_SvthMigration.cs" />
+    <Compile Include="Migrations\202101141033110_SvthMigration.designer.cs">
+      <DependentUpon>202101141033110_SvthMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -186,6 +257,7 @@
     <Compile Include="Models\Destination.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -245,9 +317,29 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Articles\Index.cshtml" />
+    <Content Include="Views\Articles\New.cshtml" />
+    <Content Include="Views\Articles\Edit.cshtml" />
+    <Content Include="Views\Articles\Details.cshtml" />
+    <Content Include="Views\Destinations\New.cshtml" />
+    <Content Include="Views\Destinations\Edit.cshtml" />
+    <Content Include="Views\Comments\Edit.cshtml" />
+    <Content Include="Views\Categories\Index.cshtml" />
+    <Content Include="Views\Categories\New.cshtml" />
+    <Content Include="Views\Categories\Details.cshtml" />
+    <Content Include="Views\Categories\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Shared\ArticleInfo.cshtml" />
+    <Content Include="Views\Comments\Delete.cshtml" />
+    <Content Include="Views\Comments\New.cshtml" />
+    <Content Include="Views\Comments\Details.cshtml" />
+    <Content Include="Views\Articles\DetailsOwner.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -265,6 +357,54 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202101092013176_InitialModel.resx">
       <DependentUpon>202101092013176_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101092213574_SecondModel.resx">
+      <DependentUpon>202101092213574_SecondModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101101630073_ThirdMigration.resx">
+      <DependentUpon>202101101630073_ThirdMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101101724278_FourthMigration.resx">
+      <DependentUpon>202101101724278_FourthMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101101741269_FifthMigration.resx">
+      <DependentUpon>202101101741269_FifthMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101102206335_SixthMigration.resx">
+      <DependentUpon>202101102206335_SixthMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101110835185_SeventhMigration.resx">
+      <DependentUpon>202101110835185_SeventhMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101121309315_EighthMigration.resx">
+      <DependentUpon>202101121309315_EighthMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101121409338_NinethMigration.resx">
+      <DependentUpon>202101121409338_NinethMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101121420204_TenthMigration.resx">
+      <DependentUpon>202101121420204_TenthMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101131352260_EleventhMigration.resx">
+      <DependentUpon>202101131352260_EleventhMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101132209236_TwthMigration.resx">
+      <DependentUpon>202101132209236_TwthMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101132227442_ThthMigration.resx">
+      <DependentUpon>202101132227442_ThthMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101132254127_FothMigration.resx">
+      <DependentUpon>202101132254127_FothMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101132257561_FiMigration.resx">
+      <DependentUpon>202101132257561_FiMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101140858396_SxthMigration.resx">
+      <DependentUpon>202101140858396_SxthMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101141033110_SvthMigration.resx">
+      <DependentUpon>202101141033110_SvthMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,48 @@
+﻿@model Travel_App.Models.Article
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm(actionName: "New", controllerName: "Articles", method: FormMethod.Post))
+{
+    @Html.Label("Title", "Title:")
+    <br />
+    @Html.TextBoxFor(a => a.Title, null, new { placeholder = "Type in the article's title", @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Title, "", new { @class = "text-danger" })
+    <br />
+
+    @Html.Label("Text", "Text:")
+    <br />
+    @Html.TextBoxFor(a => a.Text, null, new { placeholder = "Type in the article's text", @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Text, "", new { @class = "text-danger" })
+    <br />
+
+    @*@Html.Label("Destination", "Destination:")
+    <br/>
+    @Html.TextBoxFor(a => a.Destination, null, new { placeholder = "Type in the article's destination", @class = "form-control" })
+    @Html.ValidationMessageFor(a => a.Destination.Name, "", new { @class = "text-danger" })
+    <br />*@
+
+    @*@Html.Label("Comment", "Comment:")
+        <br />
+        @Html.DropDownListFor(a => a.CommentId, new SelectList(Model.CommentList, "Value", "Text"), "Choose a publisher", new { @class = "form-control" })
+        @Html.ValidationMessageFor(a => a.CommentId, "", new { @class = "text-danger" })
+        <br />
+        <br />*@
+
+    @Html.LabelFor(a => a.CategoriesList, "Choose categories:")
+    <br />
+    for (int i = 0; i < Model.CategoriesList.Count(); i++)
+    {
+        @Html.HiddenFor(a => a.CategoriesList[i].Id)
+        @Html.HiddenFor(a => a.CategoriesList[i].Name)
+        @Html.CheckBoxFor(a => a.CategoriesList[i].Checked)
+        @Html.DisplayFor(a => a.CategoriesList[i].Name)
+        <br />
+    }
+
+    <br />
+    <button class="btn btn-primary" type="submit">Create</button>
+}

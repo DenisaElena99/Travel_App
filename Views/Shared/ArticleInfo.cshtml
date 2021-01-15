@@ -1,0 +1,25 @@
+﻿@*@using Travel_App.Models
+
+<div class="panel-heading">@Model.Title</div>
+<div class="panel-body">
+    Content: <strong>@Model.Text</strong>
+    <br />
+    <span class="label label-success">@Model.Date</span>
+    <br />
+    <i class="glyphicon glyphicon-globe">
+        @foreach (var category in Model.Categories)
+        {
+            <span>@category.CategoryName</span>
+        }
+    </i>
+    <br />
+    <i class="glyphicon glyphicon-plane"></i> <i>Destination</i> <strong> @Model.Destination </strong>
+    <br />
+    <i class="glyphicon glyphicon-user">
+        @foreach (var user in Model.User.ToList())
+        {
+            <span>@user.UserName</span>
+        }
+    </i>
+     <br />
+</div>*@

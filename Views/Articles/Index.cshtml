@@ -1,0 +1,38 @@
+﻿
+
+<h1>@ViewBag.Message</h1>
+<h2>News</h2>
+
+
+@foreach (Travel_App.Models.Article article in ViewBag.Articles)
+{
+<div class="panel panel-default">
+    <div class="panel-heading">@article.Title</div>
+    <div class="panel-body">
+        Content: <strong>@article.Text</strong>
+        <br />
+        <span class="label label-success">@article.Date</span>
+        <br />
+        <i class="glyphicon glyphicon-globe">
+            @foreach (var category in article.Categories)
+            {
+                <span>@category.CategoryName</span>
+            }
+        </i>
+        <br />
+        <i class="glyphicon glyphicon-plane"></i> <i>Destination</i> <strong> @article.Destination </strong>
+        <br />
+        <i class="glyphicon glyphicon-user">@article.User.UserName</i>
+        <br />
+    </div>
+    <div class="panel-footer">
+        <a class="btn btn-success" href="/Articles/Details/@article.ArticleId">Read this article</a>
+    </div>
+</div>
+
+}
+
+
+
+
+@Html.ActionLink("Add article", "New")

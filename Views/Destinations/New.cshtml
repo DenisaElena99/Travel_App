@@ -1,0 +1,27 @@
+﻿@model Travel_App.Models.Destination
+@{
+    ViewBag.Title = "Create a destination";
+}
+
+<h2>@ViewBag.Title</h2>
+<br />
+
+@using (Html.BeginForm(actionName: "New", controllerName: "Destination", method: FormMethod.Post))
+{
+    @Html.LabelFor(d => d.Name, "Name:")
+    <br />
+    @Html.TextBoxFor(d => d.Name, null, new { placeholder = "Write the destination", @class = "form-control" })
+    @Html.ValidationMessageFor(d => d.Name, "", new { @class = "text-danger" })
+    <br />
+    <br />
+
+    @Html.LabelFor(d => d.Description, "Description:")
+    <br />
+    @Html.TextBoxFor(d => d.Description, null, new { placeholder = "Short description", @class = "form-control" })
+    @Html.ValidationMessageFor(d => d.Description, "", new { @class = "text-danger" })
+    <br />
+    <br />
+
+
+    <button class="btn btn-primary" type="submit">Create</button>
+}

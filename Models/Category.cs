@@ -10,7 +10,9 @@ namespace Travel_App.Models
     {
         [Key]
         public int CategoryId { get; set; }
+
         [Required]
+        [RegularExpression(@"^[A-Za-z]$", ErrorMessage = "Only letters allowed!")]
         public string CategoryName { get; set; }
 
         public virtual ICollection<Article> Articles { get; set; }
